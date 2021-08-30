@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'py-history',
+    loadChildren: () => import('./py-history/py-history.module').then( m => m.PyHistoryPageModule)
+  },
+  {
+    path: 'py-listout',
+    loadChildren: () => import('./py-listout/py-listout.module').then( m => m.PyListoutPageModule)
+  },
 ];
 
 @NgModule({
