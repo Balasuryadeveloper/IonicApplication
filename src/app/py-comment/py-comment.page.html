@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Comments</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backComment()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container">
+  <ol>
+    <li>Comments can be used to explain Python code.</li>
+    <li>Comments can be used to make the code more readable.</li>
+    <li>Comments can be used to prevent execution when testing code.</li>
+  </ol>
+  <h1 class="text-primary mt-2">Creating a Comment</h1><hr>
+  <p align="justify">Comments starts with a <span style="color: red;">#</span> , and Python will ignore them:</p>
+  <ion-card class="p-3">
+    <ion-card-title><h3>Example</h3></ion-card-title>
+    <p><span style="color: green;">#This is a comment</span><br>
+      print("Hello, World!")</p>
+  </ion-card>
+  <h1 class="text-primary mt-3">MultiLine Comment</h1><hr>
+  <p align="justify">Python does not really have a syntax for multi line comments. <br>
+  To add a multiline comment you could insert a # for each line:</p>
+  <ion-card class="p-3">
+    <ion-card-title><h3>Example</h3></ion-card-title>
+    <p><span style="color: green;">#This is a comment <br>
+      #written in<br>
+      #more than just one line</span><br>
+      print("Hello, World!")</p>
+  </ion-card>
+  <p align="justify">Or, not quite as intended, you can use a multiline string.
+    Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it:</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <p><span style="color: maroon;">
+        """ <br>
+        This is a comment <br>
+        written in<br>
+        more than just one line
+       """</span><br>
+        print("Hello, World!")</p>
+    </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="ComToback()">Previous</ion-button></ion-col>
+        <ion-col></ion-col>
+        <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="ComToNext()">Next</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+</div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

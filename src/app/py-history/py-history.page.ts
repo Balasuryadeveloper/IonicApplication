@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-py-history',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PyHistoryPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
+  back(){
+    this.router.navigate(['py-listout'])
+  }
+  hisToSyntax(){
+    this.router.navigate(["py-syntax"]);
+  }
   ngOnInit() {
   }
 

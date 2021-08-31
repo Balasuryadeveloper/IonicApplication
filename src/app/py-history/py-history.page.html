@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Introduction</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="back()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -31,11 +34,17 @@
     <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
     <li>Python can be treated in a procedural way, an object-oriented way or a functional way.</li>
   </ol>
-  
+  <h1 class="mt-4 text-primary">Syntax Comparison</h1><hr>
+  <ol>
+    <li>Python was designed for readability, and has some similarities to the English language with influence from mathematics.</li>
+    <li>Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.</li>
+    <li>Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</li>
+  </ol>
+  <center><ion-button color="primary" style="margin-bottom: 20px;" (click)="hisToSyntax()">Next</ion-button></center>
 </div>
 </ion-content>
 <ion-footer>
   <ion-toolbar color="primary">
-    <ion-title size="small">CodeBytes</ion-title>
+   <ion-title size="small">CodeBytes</ion-title>
   </ion-toolbar>
 </ion-footer>

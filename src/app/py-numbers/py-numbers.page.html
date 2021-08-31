@@ -1,11 +1,66 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Numbers</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backNumbers()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<div class="container">
+  <p class="mt-2">There are three numeric types in Python:</p>
+  <ol>
+    <li>int</li>
+    <li>float</li>
+    <li>complex</li>
+  </ol>
+  <p class="mt-2">Variables of numeric types are created when you assign a value to them:</p>
+  <ion-card class="p-3">
+    <ion-card-title>Example</ion-card-title>
+    <pre class="mt-1">
+      x = 1    # int 
+      y = 2.8  # float
+      z = 1j   # complex
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-2">Int</h1><hr>
+  <p>Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.</p>
+  <ion-card class="p-3">
+    <ion-card-title>Example</ion-card-title>
+    <pre class="mt-1">
+      x = 1    
+      y = -20  
+      z = 10   
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-2">Float</h1><hr>
+  <p>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.</p>
+  <ion-card class="p-3">
+    <ion-card-title>Example</ion-card-title>
+    <pre class="mt-1">
+      x = 1.0    
+      y = -20.0    
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-2">Complex</h1><hr>
+  <p>Complex numbers are written with a "j" as the imaginary part:</p>
+  <ion-card class="p-3">
+    <ion-card-title>Example</ion-card-title>
+    <pre class="mt-1">
+      x = 3+5j
+      y = 5j
+      z = -5j   
+    </pre>
+  </ion-card>
+</div>
+<ion-grid>
+  <ion-row>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="numToback()">Previous</ion-button></ion-col>
+    <ion-col></ion-col>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="numToNext()">Next</ion-button></ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
 
 <ion-footer>

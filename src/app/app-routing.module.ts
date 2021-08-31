@@ -35,6 +35,30 @@ const routes: Routes = [
     path: 'py-numbers',
     loadChildren: () => import('./py-numbers/py-numbers.module').then( m => m.PyNumbersPageModule)
   },
+  {
+    path: 'py-comment',
+    loadChildren: () => import('./py-comment/py-comment.module').then( m => m.PyCommentPageModule)
+  },
+  {
+    path: 'py-string',
+    loadChildren: () => import('./py-string/py-string.module').then( m => m.PyStringPageModule)
+  },
+  {
+    path: 'py-boolean',
+    loadChildren: () => import('./py-boolean/py-boolean.module').then( m => m.PyBooleanPageModule)
+  },
+  {
+    path: 'py-operator',
+    loadChildren: () => import('./py-operator/py-operator.module').then( m => m.PyOperatorPageModule)
+  },
+  {
+    path: 'py-list',
+    loadChildren: () => import('./py-list/py-list.module').then( m => m.PyListPageModule)
+  },
+  {
+    path: 'py-tuple',
+    loadChildren: () => import('./py-tuple/py-tuple.module').then( m => m.PyTuplePageModule)
+  },
 ];
 
 @NgModule({

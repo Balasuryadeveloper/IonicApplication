@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Strings</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backstring()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <p class="mt-2">Strings in python are surrounded by either single quotation marks, or double quotation marks.</p>
+    <p><span style="color: red;">'hello'</span> is the same as <span style="color: red;">"hello"</span>.</p>
+    <p>You can display a string literal with the <span style="color: red;">print()</span> function:</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        print("Hello")
+        print('Hello')
+      </pre>
+    </ion-card>
+    <h1 class="text-primary mt-2">Multiline Strings</h1><hr>
+    <p>You can assign a multiline string to a variable by using three quotes:</p>
+    <ion-card class="p-3">
+    <ion-card-title><h3>Example</h3></ion-card-title>
+    <pre>
+      a = """Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua."""
+      print(a)
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-2">Strings are Arrays</h1><hr>
+  <p>Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.</p>
+  <p>However, Python does not have a character data type, a single character is simply a string with a length of 1.</p>
+  <p>Square brackets can be used to access elements of the string.</p>
+  <ion-card class="p-3">
+    <ion-card-title><h3>Example</h3></ion-card-title>
+    <pre>
+      a = "Hello, World!"
+      print(a[1])
+      output :
+      e
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-2">Looping Through a String</h1><hr>
+  <p>Since strings are arrays, we can loop through the characters in a string, with a for loop.</p>
+  <ion-card class="p-3">
+    <ion-card-title><h3>Example</h3></ion-card-title>
+    <pre>
+      for x in "banana":
+         print(x)
+      
+      Output :
+      b
+      a
+      n
+      a
+      n
+      a
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-2">Slicing String</h1><hr>
+  <p align="justify">You can return a range of characters by using the slice syntax. 
+    Specify the start index and the end index, separated by a colon, to return a part of the string.</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        b = "Hello, World!"
+        print(b[2:5])
+        Output :
+        llo
+      </pre>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

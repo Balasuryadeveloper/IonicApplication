@@ -23,6 +23,21 @@ export class PyListoutPage implements OnInit {
   number(){
     this.router.navigate(['py-numbers']);
   }
+  comment(){
+    this.router.navigate(['py-comment'])
+  }
+  string(){
+    this.router.navigate(['py-string']);
+  }
+  boolean(){
+    this.router.navigate(['py-boolean']);
+  }
+  list(){
+    this.router.navigate(['py-list']);
+  }
+  tuple(){
+    this.router.navigate(['py-tuple']);
+  }
   ngOnInit() {
   }
 

@@ -1,12 +1,40 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Syntax</ion-title>
-
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backSyntax()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<div class="container">
+  <h1 class="text-primary">Execute Python Syntax</h1><hr>
+  <p align="justify">As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:</p>
+  <ion-card class="p-3">
+    >>> print("Hello, World!") <br>
+      Hello, World!
+  </ion-card>
+  <p align="justify" class="mt-2">Or by creating a python file on the server, using the .py file extension, and running it in the Command Line:</p>
+  <ion-card class="p-3">
+    C:\Users\Your Name>python myfile.py
+  </ion-card>
+  <h1 class="text-primary">Python Indentation</h1><hr>
+  <p align="justify">Indentation refers to the spaces at the beginning of a code line.</p>
+  <p align="justify">Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.</p>
+  <p align="justify">Python uses indentation to indicate a block of code.</p>
+</div>
+<ion-card class="p-3">
+  <ion-card-title><h3>Example</h3></ion-card-title>
+  if 5 > 2: <br> &nbsp; print("Five is greater than two!")
+</ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="SynToback()">Previous</ion-button></ion-col>
+    <ion-col></ion-col>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="SynToNext()">Next</ion-button></ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
 
 <ion-footer>
