@@ -5,10 +5,25 @@
 </ion-header>
 
 <ion-content>
-<table class="table">
-  <tr><td>Intro</td></tr>
-  <tr><td>Intro</td></tr>
-</table>
+<div class="container">
+  <ion-list>
+    <ion-item>
+      <ion-label (click)="intro()">Intro</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label (click)="syntax()">Syntax</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label (click)="variables()">Variables</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label (click)="dataType()">DataType</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label (click)="number()">Numbers</ion-label>
+    </ion-item>
+  </ion-list>
+</div>
 </ion-content>
 <ion-footer>
   <ion-toolbar color="primary">

@@ -19,6 +19,22 @@ const routes: Routes = [
     path: 'py-listout',
     loadChildren: () => import('./py-listout/py-listout.module').then( m => m.PyListoutPageModule)
   },
+  {
+    path: 'py-syntax',
+    loadChildren: () => import('./py-syntax/py-syntax.module').then( m => m.PySyntaxPageModule)
+  },
+  {
+    path: 'py-var',
+    loadChildren: () => import('./py-var/py-var.module').then( m => m.PyVarPageModule)
+  },
+  {
+    path: 'py-datatype',
+    loadChildren: () => import('./py-datatype/py-datatype.module').then( m => m.PyDatatypePageModule)
+  },
+  {
+    path: 'py-numbers',
+    loadChildren: () => import('./py-numbers/py-numbers.module').then( m => m.PyNumbersPageModule)
+  },
 ];
 
 @NgModule({
