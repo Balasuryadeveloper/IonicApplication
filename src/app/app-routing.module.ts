@@ -67,6 +67,14 @@ const routes: Routes = [
     path: 'py-dict',
     loadChildren: () => import('./py-dict/py-dict.module').then( m => m.PyDictPageModule)
   },
+  {
+    path: 'py-if',
+    loadChildren: () => import('./py-if/py-if.module').then( m => m.PyIfPageModule)
+  },
+  {
+    path: 'py-while',
+    loadChildren: () => import('./py-while/py-while.module').then( m => m.PyWhilePageModule)
+  },
 ];
 
 @NgModule({
