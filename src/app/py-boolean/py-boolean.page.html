@@ -1,9 +1,53 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>py-boolean</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Booleans</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backBool()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<div class="container">
+<h1 class="text-primary">Boolean Values</h1><hr>
+<ol>
+  <li>In programming you often need to know if an expression is True or False.</li>
+  <li>You can evaluate any expression in Python, and get one of two answers, True or False.</li>
+  <li>When you compare two values, the expression is evaluated and Python returns the Boolean answer:</li>
+</ol>
+<ion-card>
+  <ion-card-title><h1>Example</h1></ion-card-title>
+  <pre>
+    print(10 > 9)
+    print(10 == 9)
+    print(10 < 9)
+    Output :
+    true
+    false
+    false
+  </pre>
+</ion-card>
+<h1 class="text-primary mt-2">Evaluate Values and Variables</h1><hr>
+<p align="justify">The bool() function allows you to evaluate any value, and give you True or False in return,</p>
+<ion-card>
+  <ion-card-title><h1>Example</h1></ion-card-title>
+  <pre>
+    print(bool("Hello"))
+    print(bool(15))
+  </pre>
+</ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="boolToback()">Previous</ion-button></ion-col>
+    <ion-col></ion-col>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="boolToNext()">Next</ion-button></ion-col>
+  </ion-row>
+</ion-grid>
+</div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

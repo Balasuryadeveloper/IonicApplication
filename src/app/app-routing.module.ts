@@ -59,6 +59,14 @@ const routes: Routes = [
     path: 'py-tuple',
     loadChildren: () => import('./py-tuple/py-tuple.module').then( m => m.PyTuplePageModule)
   },
+  {
+    path: 'py-set',
+    loadChildren: () => import('./py-set/py-set.module').then( m => m.PySetPageModule)
+  },
+  {
+    path: 'py-dict',
+    loadChildren: () => import('./py-dict/py-dict.module').then( m => m.PyDictPageModule)
+  },
 ];
 
 @NgModule({

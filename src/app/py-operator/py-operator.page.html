@@ -1,9 +1,116 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>py-operator</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Operators</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backop()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<div class="container">
+  <p align="justify">Operators are used to perform operations on variables and values.</p>
+  <p align="justify">Python divides the operators in the following groups:</p>
+  <ol>
+    <li>Arithmetic operators</li>
+    <li>Assignment operators</li>
+    <li>Comparison operators</li>
+    <li>Logical operators</li>
+    <li>Identity operators</li>
+    <li>Membership operators</li>
+    <li>Bitwise operators</li>
+  </ol>
+  <h1 class="text-primary mt-3">Arithmetic Operators</h1><hr>
+  <p align="justify">Arithmetic operators are used with numeric values to perform common mathematical operations:</p>
+  <ion-card class="p-2">
+   <table class="table table-striped">
+     <tr><th>Operator</th>Example</tr>
+     <tr><td>+</td><td>x+y</td></tr>
+     <tr><td>-</td><td>x-y</td></tr>
+     <tr><td>*</td><td>x*y</td></tr>
+     <tr><td>/</td><td>x/y</td></tr>
+     <tr><td>%</td><td>x%y</td></tr>
+     <tr><td>//</td><td>x//y</td></tr>
+   </table>
+  </ion-card>
+  <h1 class="text-primary mt-3">Assignment Operators</h1><hr>
+  <p align="justify">Assignment operators are used to assign values to variables:</p>
+  <ion-card class="p-2">
+    <table class="table table-striped">
+      <tr><th>Operator</th><th>Example</th></tr>
+      <tr><td>=</td><td>x=5</td></tr>
+      <tr><td>+=</td><td>x+=5</td></tr>
+      <tr><td>-=</td><td>x-=5</td></tr>
+      <tr><td>*=</td><td>x*=5</td></tr>
+      <tr><td>/=</td><td>x/=5</td></tr>
+      <tr><td>%=</td><td>x%=5</td></tr>
+      <tr><td>//=</td><td>x//=5</td></tr>
+     </table>
+  </ion-card>
+  <h1 class="text-primary mt-3">Comparison Operators</h1><hr>
+  <p align="justify">Comparison operators are used to compare two values:</p>
+  <ion-card class="p-2">
+    <table class="table table-striped">
+      <tr><th>Operator</th><th>Example</th></tr>
+      <tr><td>==</td><td>x==5</td></tr>
+      <tr><td>!=</td><td>x!=5</td></tr>
+      <tr><td>></td><td>x>5</td></tr>
+      <tr><td>>=</td><td>x>=5</td></tr>
+      <tr><td><</td><td>x<5</td></tr>
+      <tr><td><=</td><td>x<=5</td></tr>
+     </table>
+  </ion-card>
+  <h1 class="text-primary mt-3">Logical Operators</h1><hr>
+  <p align="justify">Logical operators are used to combine conditional statements:</p>
+  <ion-card class="p-2">
+    <table class="table table-striped">
+      <tr><th>Operator</th><th>Example</th></tr>
+      <tr><td>and</td><td>x>=5 and x<=10</td></tr>
+      <tr><td>or</td><td>x!=5 or x==6</td></tr>
+      <tr><td>not</td><td>not(x>5)</td></tr>
+     </table>
+  </ion-card>
+  <h1 class="text-primary mt-3">Identity Operators</h1><hr>
+  <p align="justify">Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:</p>
+  <ion-card class="p-2">
+    <pre>
+is 	    Returns True if both variables are the same object. Ex: x is y	
+is not	    Returns True if both variables are not the same object. Ex: x is not y
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-3">Membership Operators</h1><hr>
+  <p align="justify">Membership operators are used to test if a sequence is presented in an object:</p>
+  <ion-card class="p-2">
+    <pre>
+in 	   Returns True if a sequence with the specified value is present in the object. Ex:	x in y	
+not in	   Returns True if a sequence with the specified value is not present in the object.Ex:	x not in y
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-3">Bitwise Operators</h1><hr>
+  <p align="justify">Bitwise operators are used to compare (binary) numbers:</p>
+  <ion-card class="p-2">
+    <table class="table table-striped">
+      <tr><th>Operator</th><th>Name</th></tr>
+      <tr><td>&</td>and</tr>
+      <tr><td>|</td>or</tr>
+      <tr><td>^</td>Xor</tr>
+      <tr><td>~</td>Not</tr>
+      <tr><td><<</td>Zero fill left shift</tr>
+      <tr><td>>></td>Signed right shift</tr>
+     </table>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="opToback()">Previous</ion-button></ion-col>
+      <ion-col></ion-col>
+      <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="opToNext()">Next</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

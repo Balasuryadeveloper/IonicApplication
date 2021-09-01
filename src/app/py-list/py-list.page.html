@@ -1,9 +1,176 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>py-list</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>List</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backlist()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<div class="container">
+  <p align="justify">Lists are used to store multiple items in a single variable.</p>
+  <p align="justify">Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.</p>
+  <p align="justify">Lists are created using square brackets:</p>
+  <ion-card class="p-2">
+    <h3>Example</h3>
+    <pre>
+      thislist = ["apple", "banana", "cherry"]
+      print(thislist)
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-3">List Items</h1><hr>
+  <p align="justify">List items are ordered, changeable, and allow duplicate values.
+    List items are indexed, the first item has index [0], the second item has index [1] etc.</p>
+    <h1 class="text-primary mt-3">Ordered</h1><hr>
+    <p align="justify">When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
+      If you add new items to a list, the new items will be placed at the end of the list.</p>
+      <h1 class="text-primary mt-3">Changeable</h1><hr>
+      <p align="justify">The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.</p>
+      <h1 class="text-primary mt-3">Allow Duplicates</h1><hr>
+      <p align="justify">Since lists are indexed, lists can have items with the same value:</p>
+      <ion-card class="p-2">
+        <pre>
+          thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+          print(thislist)
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">list Length</h1><hr>
+      <p>To determine how many items a list has, use the len() function:</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          thislist = ["apple", "banana", "cherry"]
+          print(len(thislist))
+          OutPut:
+          3
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">List Items - Data Types</h1><hr>
+      <p>List items can be of any data type:</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          list1 = ["abc", 34, True, 40, "male"]
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">Item Accessing</h1>
+      <p>List items are indexed and you can access them by referring to the index number:</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          thislist = ["apple", "banana", "cherry"]
+          print(thislist[1])
+          OutPut:
+          banana
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">Negative Indexing</h1>
+      <p>
+        Negative indexing means start from the end .
+        -1 refers to the last item, -2 refers to the second last item etc.
+      </p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          thislist = ["apple", "banana", "cherry"]
+          print(thislist[-1])
+          OutPut:
+          cherry
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">Change List Items</h1>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          thislist = ["apple", "banana", "cherry"]
+          thislist[1] = "blackcurrant"
+          print(thislist)
+          Output:
+          ["apple", "blackcurrant", "cherry"]
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">Append Item</h1>
+      <p>To add an item to the end of the list, use the append() method:</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          thislist = ["apple", "banana", "cherry"]
+          thislist.append("orange")
+          print(thislist)
+          OutPut:
+          ["apple", "banana", "cherry","orange"]
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">Insert Item</h1>
+      <p>To insert a list item at a specified index, use the insert() method.</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          thislist = ["apple", "banana", "cherry"]
+          thislist.insert(2,"orange")
+          print(thislist)
+          OutPut:
+          ["apple", "banana","orange"]
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">Extend List</h1>
+      <p>To append elements from another list to the current list, use the extend() method.</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          thislist = ["apple", "banana", "cherry"]
+          tropical = ["mango", "pineapple", "papaya"]
+          thislist.extend(tropical)
+          print(thislist)
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">Remove item</h1>
+      <p>The remove() method removes the specified item.</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          Remove "banana":
 
+          thislist = ["apple", "banana", "cherry"]
+          thislist.remove("banana")
+          print(thislist)
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">Removed index value</h1>
+      <p>The pop() method removes the specified index value.</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          Remove the second item:
+
+          thislist = ["apple", "banana", "cherry"]
+          thislist.pop(1)
+          print(thislist)
+        </pre>
+      </ion-card>
+      <h1 class="text-primary mt-3">del()</h1>
+      <p>The del keyword also removes the specified index:</p>
+      <ion-card class="p-2">
+        <h3>Example</h3>
+        <pre>
+          thislist = ["apple", "banana", "cherry"]
+          del thislist[0]
+          print(thislist)
+        </pre>
+      </ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="listToback()">Previous</ion-button></ion-col>
+          <ion-col></ion-col>
+          <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="listToNext()">Next</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>
