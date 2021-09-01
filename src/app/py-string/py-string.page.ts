@@ -11,6 +11,12 @@ export class PyStringPage implements OnInit {
   backstring(){
     this.router.navigate(['py-listout']);
   }
+  strToback(){
+    this.router.navigate(['py-numbers']);
+  }
+  strToNext(){
+    this.router.navigate(['py-boolean']);
+  }
   ngOnInit() {
   }
 

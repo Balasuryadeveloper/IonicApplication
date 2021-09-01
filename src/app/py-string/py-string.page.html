@@ -73,6 +73,100 @@
         llo
       </pre>
     </ion-card>
+    <h1 class="text-primary mt-2">Modify Strings</h1><hr>
+    <p align="justify">Python has a set of built-in methods that you can use on strings.</p>
+    <h1 class="text-primary mt-2">Upper Case</h1><hr>
+    <p align="justify">The upper() method returns the string in upper case:</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        a = "Hello, World!"
+        print(a.upper())
+        OutPut :
+        HELLO, WORLD!
+      </pre>
+    </ion-card>
+    <h1 class="text-primary mt-2">Lower Case</h1><hr>
+    <p align="justify">The lower() method returns the string in Lower case:</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        a = "HELLO, WORLD!"
+        print(a.lower())
+        OutPut :
+        hello, world!
+      </pre>
+    </ion-card>
+    <h1 class="text-primary mt-3">Remove Whitespace</h1><hr>
+    <p align="justify">Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
+      The strip() method removes any whitespace from the beginning or the end:
+    </p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        a = " Hello, World! "
+        print(a.strip()) # returns "Hello, World!"
+      </pre>
+    </ion-card>
+    <h1 class="text-primary mt-2">Replace String</h1><hr>
+    <p align="justify">The replace() method replaces a string with another string:</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        a = "Hello, World!"
+        print(a.replace("H", "J"))
+        OutPut :
+        Jello, World!
+      </pre>
+    </ion-card>
+    <h1 class="text-primary mt-2">Split String</h1><hr>
+    <p align="justify">The split() method returns a list where the text between the specified separator becomes the list items.</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        a = "Hello, World!"
+        print(a.split(",")) 
+        # returns ['Hello', ' World!']
+      </pre>
+    </ion-card>
+    <h1 class="text-primary mt-2">String Concatenation</h1><hr>
+    <p align="justify">To concatenate, or combine, two strings you can use the + operator.</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        a = "Hello"
+        b = "World"
+        c = a + b
+        print(c)
+        Output :
+        HelloWorld
+      </pre>
+    </ion-card>
+    <h1 class="text-primary mt-2">Escape Characters</h1><hr>
+    <p align="justify">To insert characters that are illegal in a string, use an escape character.
+      An escape character is a backslash \ followed by the character you want to insert.</p>
+    <ion-card class="p-3">
+      <ion-card-title><h3>Example</h3></ion-card-title>
+      <pre>
+        txt = "We are the so-called \"Vikings\" from the north."
+        \'	Single Quote	
+        \\	Backslash	
+        \n	New Line	
+        \r	Carriage Return	
+        \t	Tab	
+        \b	Backspace	
+        \f	Form Feed	
+        \ooo	Octal value	
+        \xhh	Hex value
+      </pre>
+    </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="strToback()">Previous</ion-button></ion-col>
+        <ion-col></ion-col>
+        <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="strToNext()">Next</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
 
