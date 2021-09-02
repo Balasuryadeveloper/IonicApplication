@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Inheritance</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backinhar()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container mt-3">
+  <p align="justify">Inheritance allows us to define a class that inherits all the methods and properties from another class.</p>
+ <p align="justify">Parent class is the class being inherited from, also called base class.</p>
+ <p align="justify">Child class is the class that inherits from another class, also called derived class.</p>
+<h1 class="text-primary mt-3">Create Parent Class</h1><hr>
+<p align="justify">Any class can be a parent class, so the syntax is the same as creating any other class:</p>
+<ion-card class="p-3">
+  <h3>Example</h3>
+  <pre>
+    class Person:
+    def __init__(self, fname, lname):
+      self.firstname = fname
+      self.lastname = lname
+    def printname(self):
+      print(self.firstname, self.lastname)  
+  x = Person("John", "Doe")
+  x.printname()
+  </pre>
+</ion-card>
+<h1 class="text-primary mt-3">Create child Class</h1><hr>
+<p align="justify">To create a class that inherits the functionality from another class, send the parent class as a parameter when creating the child class:</p>
+<ion-card class="p-3">
+  <h3>Example</h3>
+  <pre>
+    class Student(Person):
+      pass
+  </pre>
+</ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="inharToback()">Previous</ion-button></ion-col>
+    <ion-col></ion-col>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="inharToNext()">Next</ion-button></ion-col>
+  </ion-row>
+</ion-grid>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

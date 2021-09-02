@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Scopes</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backscope()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container mt-3">
+  <p>A variable is only available from inside the region it is created. This is called scope.</p>
+  <h1 class="text-primary mt-3">Local Scope</h1><hr>
+  <p>A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    <pre>
+      def myfunc():
+        x = 300
+        print(x)
+      myfunc()
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-3">Function inside Function</h1><hr>
+  <p>As explained in the example above, the variable x is not available outside the function, but it is available for any function inside the function:</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    <pre>
+      def myfunc():
+        x = 300
+      def myinnerfunc():
+        print(x)
+      myinnerfunc()
+      myfunc()
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-3">Global Scope</h1><hr>
+  <p>A variable created in the main body of the Python code is a global variable and belongs to the global scope.
+    Global variables are available from within any scope, global and local.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    <pre>
+      x = 300
+      def myfunc():
+        print(x)
+      myfunc()
+      print(x)
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-3">Naming Variables</h1><hr>
+  <p>If you operate with the same variable name inside and outside of a function, Python will treat them as two separate variables, one available in the global scope (outside the function) and one available in the local scope (inside the function):</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    <pre>
+      x = 300
+      def myfunc():
+        x = 200
+        print(x)
+      myfunc()
+      print(x)
+    </pre>
+  </ion-card>
+  <h1 class="text-primary mt-3">Global Keyword</h1><hr>
+  <p>If you need to create a global variable, but are stuck in the local scope, you can use the global keyword.
+    The global keyword makes the variable global.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    <pre>
+      def myfunc():
+      global x
+      x = 300
+    myfunc()
+    print(x)
+    </pre>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="scopeToback()">Previous</ion-button></ion-col>
+      <ion-col></ion-col>
+      <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="scopeToNext()">Next</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

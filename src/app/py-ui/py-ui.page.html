@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>User Input</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backui()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container mt-3">
+  <p align="justify">
+<li>Python allows for user input.</li> 
+<li>That means we are able to ask the user for input.</li>
+<li>The method is a bit different in Python 3.6 than Python 2.7.</li> 
+<li>Python 3.6 uses the input() method.</li> 
+<li>Python 2.7 uses the raw_input() method.</li> 
+The following example asks for the username, and when you entered the username, it gets printed on the screen:
+  </p>
+  <ion-card class="p-3">
+    <h3>Python-3.6</h3>
+    <pre>
+username = input("Enter username:")
+print("Username is: " + username)
+    </pre>
+  </ion-card>
+  <ion-card class="p-3">
+    <h3>Python-2.7</h3>
+    <pre>
+username = raw_input("Enter username:")
+print("Username is: " + username)
+    </pre>
+  </ion-card>
+  <center><ion-button color="primary" style="margin-bottom: 20px;" (click)="backhere()">Prevoius</ion-button></center>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

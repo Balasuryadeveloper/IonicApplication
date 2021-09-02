@@ -87,6 +87,34 @@ const routes: Routes = [
     path: 'py-array',
     loadChildren: () => import('./py-array/py-array.module').then( m => m.PyArrayPageModule)
   },
+  {
+    path: 'py-clsobj',
+    loadChildren: () => import('./py-clsobj/py-clsobj.module').then( m => m.PyClsobjPageModule)
+  },
+  {
+    path: 'py-inheritance',
+    loadChildren: () => import('./py-inheritance/py-inheritance.module').then( m => m.PyInheritancePageModule)
+  },
+  {
+    path: 'py-iterator',
+    loadChildren: () => import('./py-iterator/py-iterator.module').then( m => m.PyIteratorPageModule)
+  },
+  {
+    path: 'py-scope',
+    loadChildren: () => import('./py-scope/py-scope.module').then( m => m.PyScopePageModule)
+  },
+  {
+    path: 'py-module',
+    loadChildren: () => import('./py-module/py-module.module').then( m => m.PyModulePageModule)
+  },
+  {
+    path: 'py-math',
+    loadChildren: () => import('./py-math/py-math.module').then( m => m.PyMathPageModule)
+  },
+  {
+    path: 'py-ui',
+    loadChildren: () => import('./py-ui/py-ui.module').then( m => m.PyUiPageModule)
+  },
 ];
 
 @NgModule({

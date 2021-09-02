@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Modules</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backmodule()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container">
+  <h1 class="text-primary mt-3">What is Module?</h1><hr>
+  <p>Consider a module to be the same as a code library.
+    A file containing a set of functions you want to include in your application.</p>
+    <h1 class="text-primary mt-3">Create Module</h1><hr>
+    <p>To create a module just save the code you want in a file with the file extension .py:</p>
+    <ion-card class="p-3">
+      <h3>Example</h3>
+      def greeting(name): <br>
+      print("Hello, " + name)</ion-card>
+      <h1 class="text-primary mt-3">Use Module</h1><hr>
+      <p>Now we can use the module we just created, by using the import statement:</p>
+      <ion-card class="p-3">
+        <h3>Example</h3>
+        import mymodule <br>
+        mymodule.greeting("Jonathan")
+      </ion-card>
+      <h1 class="text-primary mt-3">Variables in Module</h1><hr>
+      <p>The module can contain functions, as already described, but also variables of all types (arrays, dictionaries, objects etc):</p>
+      <ion-card class="p-3">
+        <h3>Example</h3>
+        import mymodule <br>
+        a = mymodule.person1["age"] <br>
+        print(a)
+      </ion-card>
+      <h1 class="text-primary mt-3">Built-in Module</h1><hr>
+      <p>There are several built-in modules in Python, which you can import whenever you like.</p>
+      <ion-card class="p-3">
+        <h3>Example</h3>
+        import platform <br>
+        x = platform.system() <br>
+        print(x)
+      </ion-card>
+      <h1 class="text-primary mt-3">Using the dir() Function</h1><hr>
+      <p>There is a built-in function to list all the function names (or variable names) in a module. The dir() function:</p>
+      <ion-card class="p-3">
+        <h3>Example</h3>
+         <pre>
+          import platform
+
+          x = dir(platform)
+          print(x)
+         </pre>
+      </ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="moduleToback()">Previous</ion-button></ion-col>
+          <ion-col></ion-col>
+          <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="moduleToNext()">Next</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

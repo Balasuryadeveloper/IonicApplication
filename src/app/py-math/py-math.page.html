@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Math Functions</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backmath()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container mt-3">
+<p>Python has a set of built-in math functions, including an extensive math module, that allows you to perform mathematical tasks on numbers.</p>
+<h1 class="text-primary mt-3">Built-in Math Function</h1><hr>
+<p align="justify">The min() and max() functions can be used to find the lowest or highest value in an iterable:</p>
+<ion-card class="p-3">
+  <pre>
+    x = min(5, 10, 25)
+    y = max(5, 10, 25)
+    print(x)
+    print(y)
+    output:
+    5
+    25
+    </pre>
+</ion-card>
+<p align="justify">The abs() function returns the absolute (positive) value of the specified number:</p>
+<ion-card class="p-3">
+  <pre>
+    x = abs(-7.25)
+    print(x)
+    output :
+    7.25
+    </pre>
+</ion-card>
+<p align="justify">The pow(x, y) function returns the value of x to the power of y (x^y).</p>
+<ion-card class="p-3">
+  <pre>
+    x = pow(4, 3)
+    print(x)
+    output :
+    64
+    </pre>
+</ion-card>
+<h1 class="text-primary mt-3">Math Module</h1><hr>
+<p align="justify">When you have imported the math module, you can start using methods and constants of the module.
+  The math.sqrt() method for example, returns the square root of a number:</p>
+<ion-card class="p-3">
+  <pre>
+    import math
+    x = math.sqrt(64)
+    print(x)
+    output :
+    8.0
+    </pre>
+</ion-card>
+<p align="justify">The math.ceil() method rounds a number upwards to its nearest integer, and the math.floor() method rounds a number downwards to its nearest integer, and returns the result:</p>
+<ion-card class="p-3">
+  <pre>
+    import math
+    x = math.ceil(1.4)
+    y = math.floor(1.4)
+    print(x) # returns 2
+    print(y) # returns 1
+    </pre>
+</ion-card>
+<p align="justify">The math.pi constant, returns the value of PI (3.14...):</p>
+<ion-card class="p-3">
+  <pre>
+   import math
+   x = math.pi
+   print(x)
+    </pre>
+</ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="mathToback()">Previous</ion-button></ion-col>
+    <ion-col></ion-col>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="mathToNext()">Next</ion-button></ion-col>
+  </ion-row>
+</ion-grid>
+</div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

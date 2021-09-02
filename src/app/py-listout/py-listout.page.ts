@@ -59,6 +59,27 @@ export class PyListoutPage implements OnInit {
   pyarray(){
     this.router.navigate(['py-array']);
   }
+  clsobj(){
+    this.router.navigate(['py-clsobj']);
+  }
+  pyinheritance(){
+    this.router.navigate(['py-inheritance']);
+  }
+  pyiterator(){
+    this.router.navigate(['py-iterator']);
+  }
+  pyscope(){
+    this.router.navigate(['py-scope']);
+  }
+  pymodule(){
+    this.router.navigate(['py-module']);
+  }
+  pymath(){
+    this.router.navigate(['py-math']);
+  }
+  pyui(){
+    this.router.navigate(['py-ui']);
+  }
   ngOnInit() {
   }
 

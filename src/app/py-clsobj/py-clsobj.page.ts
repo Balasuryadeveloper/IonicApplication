@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-py-func',
-  templateUrl: './py-func.page.html',
-  styleUrls: ['./py-func.page.scss'],
+  selector: 'app-py-clsobj',
+  templateUrl: './py-clsobj.page.html',
+  styleUrls: ['./py-clsobj.page.scss'],
 })
-export class PyFuncPage implements OnInit {
+export class PyClsobjPage implements OnInit {
 
   constructor(private router:Router) { }
-  backfunc(){
+  backclsobj(){
     this.router.navigate(['py-listout']);
   }
-  funcToback(){
-    this.router.navigate(['py-for']);
-  }
-  funcToNext(){
+  clsobjToback(){
     this.router.navigate(['py-array']);
+  }
+  clsobjToNext(){
+    this.router.navigate(['py-inheritance']);
   }
   ngOnInit() {
   }

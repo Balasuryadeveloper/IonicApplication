@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Iterators</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backiter()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container mt-3">
+<p align="justify">An iterator is an object that contains a countable number of values.
+  An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.</p>
+<p align="justify">Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().</p>
+<h1 class="text-primary mt-3">Iterator vs Iterable</h1><hr>
+<p align="justify">Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from.
+  All these objects have a iter() method which is used to get an iterator:</p>
+<ion-card class="p-3">
+  <h3>Example</h3>
+  <pre>
+    mytuple = ("apple", "banana", "cherry")
+    myit = iter(mytuple)
+    
+    print(next(myit))
+    print(next(myit))
+    print(next(myit))
+  </pre>
+</ion-card>
+<h1 class="text-primary mt-3">Create Iterator</h1><hr>
+<p align="justify">To create an object/class as an iterator you have to implement the methods __iter__() and __next__() to your object.
+  As you have learned in the Python Classes/Objects chapter, all classes have a function called __init__(), which allows you to do some initializing when the object is being created.</p>
+<p align="justify">The __iter__() method acts similar, you can do operations (initializing etc.), but must always return the iterator object itself.
+  The __next__() method also allows you to do operations, and must return the next item in the sequence.</p>
+<ion-card class="p-3">
+  <h3>Example</h3>
+  <pre>
+    class MyNumbers:
+    def __iter__(self):
+      self.a = 1
+      return self
+  
+    def __next__(self):
+      x = self.a
+      self.a += 1
+      return x
+  
+  myclass = MyNumbers()
+  myiter = iter(myclass)
+  
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  </pre>
+</ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="iterToback()">Previous</ion-button></ion-col>
+    <ion-col></ion-col>
+    <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="iterToNext()">Next</ion-button></ion-col>
+  </ion-row>
+</ion-grid>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>
