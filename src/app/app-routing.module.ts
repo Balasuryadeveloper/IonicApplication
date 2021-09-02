@@ -75,6 +75,18 @@ const routes: Routes = [
     path: 'py-while',
     loadChildren: () => import('./py-while/py-while.module').then( m => m.PyWhilePageModule)
   },
+  {
+    path: 'py-for',
+    loadChildren: () => import('./py-for/py-for.module').then( m => m.PyForPageModule)
+  },
+  {
+    path: 'py-func',
+    loadChildren: () => import('./py-func/py-func.module').then( m => m.PyFuncPageModule)
+  },
+  {
+    path: 'py-array',
+    loadChildren: () => import('./py-array/py-array.module').then( m => m.PyArrayPageModule)
+  },
 ];
 
 @NgModule({

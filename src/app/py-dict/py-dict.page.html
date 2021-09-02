@@ -1,9 +1,40 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>py-dict</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Dictionary</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backdict()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<div class="container mt-4">
+  <p align="justify">Dictionaries are used to store data values in key:value pairs.
+    A dictionary is a collection which is ordered*, changeable and does not allow duplicates.</p>
+    <h1 class="text-primary mt-3">Ordered or Unordered?</h1><hr>
+    <p align="justify">When we say that dictionaries are ordered, it means that the items have a defined order, and that order will not change.
+      Unordered means that the items does not have a defined order, you cannot refer to an item by using an index.</p>
+      <h1 class="text-primary mt-3">Changeable</h1><hr>
+      <p align="justify">Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.</p>
+      <h1 class="text-primary mt-3">Duplicate allowed ?</h1><hr>
+      <p align="justify">Dictionaries cannot have two items with the same key.Duplicate values will overwrite existing values</p>
+      <h1 class="text-primary mt-3">Dictionary Length</h1><hr>
+      <p align="justify">To determine how many items a dictionary has, use the <span style="color: red;">len()</span> function</p>
+      <h1 class="text-primary mt-3">Data Types</h1><hr>
+      <p align="justify">The values in dictionary items can be of any data type.Example :
+        String, int, boolean, and list data types</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="dictToback()">Previous</ion-button></ion-col>
+            <ion-col></ion-col>
+            <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="dictToNext()">Next</ion-button></ion-col>
+          </ion-row>
+        </ion-grid>
+</div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

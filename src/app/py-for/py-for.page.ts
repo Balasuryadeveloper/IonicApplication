@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-py-if',
-  templateUrl: './py-if.page.html',
-  styleUrls: ['./py-if.page.scss'],
+  selector: 'app-py-for',
+  templateUrl: './py-for.page.html',
+  styleUrls: ['./py-for.page.scss'],
 })
-export class PyIfPage implements OnInit {
-  
+export class PyForPage implements OnInit {
+
   constructor(private router:Router) { }
-  backif(){
+  backfor(){
     this.router.navigate(['py-listout']);
   }
-  ifToback(){
-    this.router.navigate(['py-dict']);
-  }
-  ifToNext(){
+  forToback(){
     this.router.navigate(['py-while']);
+  }
+  forToNext(){
+    this.router.navigate(['py-func']);
   }
   ngOnInit() {
   }

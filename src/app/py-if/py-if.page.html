@@ -1,9 +1,105 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>py-if</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>If..Else</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backif()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<div class="container">
+  <h1 class="text-primary mt-3">Python Conditions and If statements</h1><hr>
+  <p align="justify">Python supports the usual logical conditions from mathematics:</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    Equals: a == b <br>
+    Not Equals: a != b <br>
+    Less than: a < b <br>
+    Less than or equal to: a <= b <br>
+    Greater than: a > b <br>
+    Greater than or equal to: a >= b 
+  </ion-card>
+  <h1 class="text-primary mt-3">If</h1><hr>
+  <p align="justify">An "if statement" is written by using the if keyword.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    a = 33 <br>
+    b = 200 <br>
+    if b > a: <br>
+    &nbsp;&nbsp; print("b is greater than a")
+  </ion-card>
+  <h1 class="text-primary mt-3">Elif</h1><hr>
+  <p align="justify">The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    a = 33 <br>
+    b = 33 <br>
+    if b > a: <br>
+    &nbsp;&nbsp; print("b is greater than a") <br>
+    elif a == b: <br>
+    &nbsp;&nbsp; print("a and b are equal")
+  </ion-card>
+  <h1 class="text-primary mt-3">Else</h1><hr>
+  <p align="justify">The else keyword catches anything which isn't caught by the preceding conditions.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    a = 200 <br>
+    b = 33 <br>
+    if b > a: <br>
+    &nbsp;&nbsp; print("b is greater than a") <br>
+    elif a == b: <br>
+    &nbsp;&nbsp; print("a and b are equal") <br>
+    else: <br>
+    &nbsp;&nbsp; print("a is greater than b") 
+  </ion-card>
+  <h1 class="text-primary mt-3">Short Hand If</h1><hr>
+  <p align="justify">If you have only one statement to execute, you can put it on the same line as the if statement.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    if a > b: print("a is greater than b")
+  </ion-card>
+  <h1 class="text-primary mt-3">Short Hand If else</h1><hr>
+  <p align="justify">If you have only one statement to execute, one for if, and one for else, you can put it all on the same line:</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    a = 2 <br>
+    b = 330 <br>
+    print("A") if a > b else print("B")
+  </ion-card>
+  <h1 class="text-primary mt-3">Nested If</h1><hr>
+  <p align="justify">You can have if statements inside if statements, this is called nested if statements.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    x = 41 <br>
+    if x > 10: <br>
+    &nbsp;&nbsp; print("Above ten,") <br>
+    if x > 20: <br>
+    &nbsp;&nbsp; print("and also above 20!") <br>
+    else: <br>
+    &nbsp;&nbsp; print("but not above 20.")
+  </ion-card>
+  <h1 class="text-primary mt-3">Pass</h1><hr>
+  <p align="justify">if statements cannot be empty, but if you for some reason have an if statement with no content, put in the pass statement to avoid getting an error.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+    a = 33
+    b = 200
+    if b > a:
+    &nbsp;&nbsp; pass
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="ifToback()">Previous</ion-button></ion-col>
+      <ion-col></ion-col>
+      <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="ifToNext()">Next</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,9 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>py-set</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Sets</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backset()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<div class="container mt-4">
+  <p align="justify">Sets are used to store multiple items in a single variable.</p>
+  <p align="justify">Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.</p>
+  <p align="justify">A set is a collection which is both unordered and unindexed.
+    Sets are written with curly brackets.</p>
+  <h1 class="text-primary mt-3">Set Items</h1><hr>
+  <p align="justify">Set items are unordered, unchangeable, and do not allow duplicate values.</p>
+  <h1 class="text-primary mt-3">Unordered</h1><hr>
+  <p align="justify">Unordered means that the items in a set do not have a defined order.
+    Set items can appear in a different order every time you use them, and cannot be referred to by index or key.</p>
+    <h1 class="text-primary mt-3">Unchangeable</h1><hr>
+    <p align="justify">Sets are unchangeable, meaning that we cannot change the items after the set has been created.</p>
+    <h1 class="text-primary mt-3">Duplicate Not Allowed</h1><hr>
+    <p align="justify">Sets cannot have two items with the same value.</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="setToback()">Previous</ion-button></ion-col>
+        <ion-col></ion-col>
+        <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="setToNext()">Next</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+</div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

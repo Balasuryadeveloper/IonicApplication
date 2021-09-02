@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>For Loop</ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="backfor()" class="mx-2" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="container">
+  <p align="justify">A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</p>
+  <p align="justify">This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.</p>
+  <p align="justify">With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.</p>
+  <ion-card class="p-3">
+    <h3>Example</h3>
+<pre>
+Print each fruit in a fruit list:
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+</pre>
+  </ion-card>
+  <h1 class="text-primary mt-3">Break</h1><hr>
+   <p>With the break statement we can stop the loop before it has looped through all the items:</p>
+   <ion-card class="p-3">
+     <h3>Example</h3>
+     fruits = ["apple", "banana", "cherry"] <br>
+     for x in fruits: <br>
+     &nbsp;&nbsp; print(x) <br>
+     &nbsp;&nbsp; if x == "banana": <br>
+     &nbsp;&nbsp;&nbsp;&nbsp;break
+   </ion-card>
+   <h1 class="text-primary mt-3">Continue</h1><hr>
+   <p>With the continue statement we can stop the current iteration of the loop, and continue with the next:</p>
+   <ion-card class="p-3">
+     <h3>Example</h3>
+     fruits = ["apple", "banana", "cherry"] <br>
+     for x in fruits: <br>
+     &nbsp;&nbsp; print(x) <br>
+     &nbsp;&nbsp; if x == "banana": <br>
+     &nbsp;&nbsp;&nbsp;&nbsp;continue
+   </ion-card>
+   <h1 class="text-primary mt-3">Range()</h1><hr>
+   <p>To loop through a set of code a specified number of times, we can use the range() function,
+    The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.</p>
+   <ion-card class="p-3">
+     <h3>Example</h3>
+     <p>
+      for x in range(6): <br>
+      &nbsp;&nbsp; print(x)
+     </p>
+   </ion-card>
+   <h1 class="text-primary mt-3">Else In For</h1><hr>
+   <p>The else keyword in a for loop specifies a block of code to be executed when the loop is finished:</p>
+   <ion-card class="p-3">
+     <h3>Example</h3>
+     <p>
+      for x in range(6): <br>
+      &nbsp;&nbsp; print(x) <br>
+      else: <br>
+      &nbsp;&nbsp; print("Finally finished!")
+     </p>
+   </ion-card>
+   <h1 class="text-primary mt-3">Nested Loop</h1><hr>
+   <p>A nested loop is a loop inside a loop.
+    The "inner loop" will be executed one time for each iteration of the "outer loop":</p>
+   <ion-card class="p-3">
+     <h3>Example</h3>
+     <p>
+      adj = ["red", "big", "tasty"] <br>
+      fruits = ["apple", "banana", "cherry"] <br>
+      for x in adj: <br>
+      &nbsp;&nbsp; for y in fruits: <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; print(x, y)
+     </p>
+   </ion-card>
+   <h1 class="text-primary mt-3">Pass</h1><hr>
+   <p>for loops cannot be empty, but if you for some reason have a for loop with no content, put in the pass statement to avoid getting an error.</p>
+   <ion-card class="p-3">
+     <h3>Example</h3>
+     <p>
+      for x in [0, 1, 2]: <br>
+      &nbsp;&nbsp; pass 
+     </p>
+   </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="forToback()">Previous</ion-button></ion-col>
+      <ion-col></ion-col>
+      <ion-col><ion-button color="primary" style="margin-bottom: 20px;" (click)="forToNext()">Next</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small">CodeBytes</ion-title>
+  </ion-toolbar>
+</ion-footer>

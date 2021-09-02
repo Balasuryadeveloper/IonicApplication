@@ -38,6 +38,27 @@ export class PyListoutPage implements OnInit {
   tuple(){
     this.router.navigate(['py-tuple']);
   }
+  set(){
+    this.router.navigate(['py-set']);
+  }
+  dict(){
+    this.router.navigate(['py-dict']);
+  }
+  ifel(){
+    this.router.navigate(['py-if']);
+  }
+  whil(){
+    this.router.navigate(['py-while'])
+  }
+  pyfor(){
+    this.router.navigate(['py-for']);
+  }
+  pyfunc(){
+    this.router.navigate(['py-func']);
+  }
+  pyarray(){
+    this.router.navigate(['py-array']);
+  }
   ngOnInit() {
   }
 

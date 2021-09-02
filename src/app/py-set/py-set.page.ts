@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-py-set',
   templateUrl: './py-set.page.html',
@@ -7,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PySetPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private router:Router) { }
+  backset(){
+    this.router.navigate(['py-listout']);
+  }
+  setToback(){
+    this.router.navigate(['py-tuple']);
+  }
+  setToNext(){
+    this.router.navigate(['py-dict'])
+  }
   ngOnInit() {
   }
 
