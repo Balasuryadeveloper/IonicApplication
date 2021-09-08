@@ -20,8 +20,9 @@
     "@angular/platform-browser": "~12.1.1",
     "@angular/platform-browser-dynamic": "~12.1.1",
     "@angular/router": "~12.1.1",
+    "@capacitor/android": "^3.2.2",
     "@capacitor/app": "1.0.2",
-    "@capacitor/core": "3.2.0",
+    "@capacitor/core": "^3.2.0",
     "@capacitor/haptics": "1.0.2",
     "@capacitor/keyboard": "1.0.2",
     "@capacitor/status-bar": "1.0.2",
@@ -40,7 +41,7 @@
     "@angular/compiler": "~12.1.1",
     "@angular/compiler-cli": "~12.1.1",
     "@angular/language-service": "~12.0.1",
-    "@capacitor/cli": "3.2.0",
+    "@capacitor/cli": "^3.2.0",
     "@ionic/angular-toolkit": "^4.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
@@ -63,5 +64,14 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balasuryadeveloper/IonicApplication.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Balasuryadeveloper/IonicApplication/issues"
+  }
 }
