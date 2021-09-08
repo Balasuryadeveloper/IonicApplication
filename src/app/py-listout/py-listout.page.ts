@@ -56,6 +56,9 @@ export class PyListoutPage implements OnInit {
   pyfunc(){
     this.router.navigate(['py-func']);
   }
+  pyOp(){
+    this.router.navigate(['py-operator']);
+  }
   pyarray(){
     this.router.navigate(['py-array']);
   }
