@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Browser } from '@capacitor/browser';
+import { Plugin } from '@capacitor/core';
 @Component({
   selector: 'app-py-array',
   templateUrl: './py-array.page.html',
@@ -17,7 +19,7 @@ export class PyArrayPage implements OnInit {
   arrayToNext(){
     this.router.navigate(['py-clsobj']);
   }
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
